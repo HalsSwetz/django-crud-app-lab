@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/movies/movie-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+<section class="card-container">
+  {% for movie in movies %}
+  <div class="card">
+    <div class="card-content">
+      <div class="card-img-container">
+        <img
+          src="{% static 'images/popcorn-theatre.jpg' %}"
+          alt="movie image"
+        />
+      </div>
+      <div class="movie-info">
+      <h2 class="'movie-title"><Strong> {{ movie.name }} </Strong></h2>
+      <p class="movie-genre"> <Strong>{{ movie.genre }}</Strong> </p>
+      <p class="movie-details"> <Strong> {{ movie.director }}, {{ movie.year }} </Strong></p>
+      <p class="movie-description"> {{ movie.description }} </p>
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
