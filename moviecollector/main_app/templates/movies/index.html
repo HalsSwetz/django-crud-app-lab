@@ -8,9 +8,11 @@
 {% endblock %}
 
 {% block content %}
+
 <section class="card-container">
   {% for movie in movies %}
   <div class="card">
+    <a href="{% url 'movie-detail' movie.id %}">
     <div class="card-content">
       <div class="card-img-container">
         <img
@@ -19,11 +21,12 @@
         />
       </div>
       <div class="movie-info">
-      <h2 class="'movie-title"><Strong> {{ movie.name }} </Strong></h2>
-      <p class="movie-genre"> <Strong>{{ movie.genre }}</Strong> </p>
-      <p class="movie-details"> <Strong> {{ movie.director }}, {{ movie.year }} </Strong></p>
-      <p class="movie-description"> {{ movie.description }} </p>
+      <h2 class="'movie-title"><strong> {{ movie.name }} </strong></h2>
+      <p class="movie-genre"> <strong>{{ movie.genre }}</strong> </p>
+      <p class="movie-details"> <strong> {{ movie.director }}, {{ movie.year }} </strong></p>
+      <p class="movie-description"><em> {{ movie.description }} </em></p>
     </div>
+    </a>
     </div>
   </div>
   {% endfor %}

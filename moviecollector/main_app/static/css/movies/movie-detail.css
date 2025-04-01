@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik+Mono+One&family=Sarina&display=swap');
+
+.page-background {
+    position: relative;
+    background-image: url('https://cdn.pixabay.com/photo/2022/09/13/11/30/pattern-7451714_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+
+.movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.movie-info {
+  text-align: center;
+  padding: 2px;
+  background-color: #f3f2cd;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 6px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  font-family: 'Fugaz One', cursive;
+  color: #333;
+}
+
+.movie-info p {
+  font-size: 1.6rem;
+  color: #555;
+  margin: 5px 0;
+  margin-bottom: 3px;
+}
+
+.movie-info .movie-genre {
+  font-weight: bold;
+  color: #008CBA;
+  margin-top: 2px;
+}
+
+.movie-info .movie-description {
+  font-style: italic;
+  color: #777;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .movie-img {
+    width: 90%;
+  }
+
+  .movie-info h2 {
+    font-size: 2rem;
+  }
+
+  .movie-info p {
+    font-size: 1.4rem;
+  }
+}

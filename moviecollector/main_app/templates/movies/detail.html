@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/movies/movie-detail.css' %}" />
+{% endblock %} 
+{% block content %}
+<main class="page-background">
+<section class="movie-container">
+  <div class="movie-img">
+    <img src="{% static 'images/popcorn-theatre.jpg' %}" alt="popcorn theatre" />
+  </div>
+</div>
+<div class="movie-info">
+<h2 class="'movie-title"><strong> {{ movie.name }} </strong></h2>
+<p class="movie-genre"> <strong>{{ movie.genre }}</strong> </p>
+<p class="movie-details"> <strong> {{ movie.director }}, {{ movie.year }} </strong></p>
+<p class="movie-description"> <em> {{ movie.description }}</em></p>
+</div>
+</section>
+</main>
+{% endblock %}

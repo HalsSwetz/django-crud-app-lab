@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik+Mono+One&family=Sarina&display=swap');
+
 html {
   box-sizing: border-box;
   font-size: 1.3em;
@@ -9,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   background-image: url('{% static "images/cinemaseats.jpg" %}');
   background-size: cover; 
   background-position: center center; 
@@ -42,6 +44,7 @@ header {
   justify-content: space-between; 
   align-items: center; 
   padding: 10px 20px; 
+  z-index: 1;
 }
 
 .header-logo-container {
