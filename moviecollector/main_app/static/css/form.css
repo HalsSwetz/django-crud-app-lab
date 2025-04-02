@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik+Mono+One&family=Sarina&display=swap');  
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  table {
+    padding: 0 40px;
+    width: 100%;
+    border-spacing: 0 20px;
+  }
+  
+  th {
+    text-align: left;
+    padding: 6px 20px 0 0;
+    font-weight: normal;
+    vertical-align: top;
+    font-size: 20px;
+  }
+  
+  td {
+    max-width: 60%;
+  }
+  
+  td > * {
+    width: 100%;
+    padding: 2px 4px;
+    font-size: 22px;
+  }
+  
+  td > textarea {
+    font-family: inherit;
+  }
+  
+  .btn {
+    align-self: flex-end;
+    margin-right: 40px;
+    background-color: #696a75;
+    color: antiquewhite;
+  }
+
+  .edit-screen-img {
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+  }
+
+  .edit-movie-words {
+    font-family: 'Fugaz One', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #161b52;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .delete-screen-img {
+    border-radius: 6px;
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px; 
+  }
+
+  .confirm-question-top {
+    font-family: 'Fugaz One', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .confirm-question {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+  }
+
+  .secondary {
+    background-color: #ddd; 
+    color: #333;
+    border: 2px solid #ddd;
+  }
+
+  .secondary:hover {
+    background-color: #ccc;
+    transform: translateY(-2px); 
+  }
+  
+  .secondary:active {
+    background-color: #bbb;
+  }
+  
+  
+  .danger {
+    background-color: #f44336; 
+    color: white;
+    border: 2px solid #f44336;
+  }
+  
+  .danger:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+  }
+  
+  .danger:active {
+    background-color: #b71c1c;
+  }
+  
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }

@@ -15,6 +15,11 @@
 <p class="movie-genre"> <strong>{{ movie.genre }}</strong> </p>
 <p class="movie-details"> <strong> {{ movie.director }}, {{ movie.year }} </strong></p>
 <p class="movie-description"> <em> {{ movie.description }}</em></p>
+
+<div class="movie-actions">
+    <a href="{% url 'movie-update' movie.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'movie-delete' movie.id %}" class="btn danger">Delete</a>
+  </div>
 </div>
 </section>
 </main>

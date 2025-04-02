@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %} 
+{% block content %}
+
+<div class="page-header">
+    {% if movie %}
+      <h1 class="edit-movie-words">Edit {{ movie.name }}</h1>
+    {% else %}
+      <h1 class="edit-movie-words">Add a Movie</h1>
+    {% endif %}
+  </div>
+  <img class="edit-screen-img" src="{% static 'images/cassette-image.webp' %}" alt="A video casette" />
+</div>
+
+<form action="" method="post" class="form-container">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button type="submit" class="btn submit">Submit</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}  
+{% load static %} 
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+<div class="page-header">
+  <h1 class="confirm-question-top">Delete Movie?</h1>
+  <img class="delete-screen-img" src="{% static 'images/movie-projector.webp' %}" alt="A movie projector" />
+</div>
+
+<h2 class="confirm-question" >Are you sure you want to delete {{ movie.name }}?</h2>
+
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  <a href="{% url 'movie-detail' movie.id %}" class="btn secondary">Cancel</a>
+  <button type="submit" class="btn danger">Yes - Delete!</button>
+</form>
+
+{% endblock %}
