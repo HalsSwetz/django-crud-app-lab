@@ -22,5 +22,54 @@
   </div>
 </div>
 </section>
+<div class="critics-container">
+    <section class="critics">
+      <div class="subsection-title">
+        <img class="critic-logo" src="{% static 'images/camera.webp' %}" alt="A black and white old film movie camera" />
+        <h2 class="critic-header">Ratings</h2>
+      </div>
+      <h3>Add a Critic Rating</h3>
+      <form
+        action="{% url 'add-critic' movie.id %}"
+        method="post"
+        class="subsection-content"
+        autocomplete="off"
+        >
+    {% csrf_token %} 
+    {{ critic_form.as_p }}
+  <button type="submit" class="btn submit">Add Rating</button>
+</form>
+
+      <h3>Critics Ratings</h3>
+      <table>
+        <thead>
+          <tr>
+            <th class="critic-label">Source</th>
+            <th class="critic-label">Rating</th>
+          </tr>
+        </thead>
+        <tbody class="critic-info-container">
+          {% for critic in movie.critic_set.all %}
+            <tr>
+              <td>{{critic.get_source_display}}</td>
+              <td>
+                {% if critic.source == 'I' %}
+                    {{ critic.rating|floatformat:1 }}
+                {% elif critic.source == 'RT' %}
+                    {{ critic.rating|floatformat:0 }}
+                {% elif critic.source == 'M' %}
+                    {{ critic.rating|floatformat:0 }}
+                {% else %}
+                    {{ critic.rating }}
+                {% endif %}
+              </td>
+              
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+    </section>
+  </div>
 </main>
 {% endblock %}

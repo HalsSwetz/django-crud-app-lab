@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Movie
+from .forms import CriticForm
 
 # Create your views here.
 
@@ -17,7 +18,18 @@ def movie_index(request):
 
 def movie_detail(request, movie_id):
     movie = Movie.objects.get(id=movie_id)
-    return render(request, 'movies/detail.html', {'movie': movie})
+    critic_form = CriticForm()
+    return render(request, 'movies/detail.html', {
+        'movie': movie, 'critic_form': critic_form
+    })
+
+def add_critic(request, movie_id):
+    form = CriticForm(request.POST)
+    if form.is_valid():
+        new_critic = form.save(commit=False)
+        new_critic.movie_id = movie_id
+        new_critic.save()
+    return redirect('movie-detail', movie_id=movie_id)
 
 class MovieCreate(CreateView):
     model = Movie

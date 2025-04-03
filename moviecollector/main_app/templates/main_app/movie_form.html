@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/form.css' %}" />
 {% endblock %} 
 {% block content %}
-
+<main class="page-background">
 <div class="page-header">
     {% if movie %}
       <h1 class="edit-movie-words">Edit {{ movie.name }}</h1>
@@ -22,5 +22,5 @@
   </table>
   <button type="submit" class="btn submit">Submit</button>
 </form>
-
+</main>
 {% endblock %}

@@ -142,17 +142,146 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   }
 
-
-@media (max-width: 768px) {
-  .movie-img {
-    width: 90%;
+.critics-container {
+    padding: 30px 20px;
+    background-color: #f3f2cd;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-
-  .movie-info h2 {
+  
+  .critics-container h2 {
+    font-size: 2.5rem;
+    font-family: 'Fugaz One', cursive;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .subsection-title {
+    text-align: center;
+  }
+  
+  .subsection-title .critic-logo {
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .subsection-title h2.critic-header {
     font-size: 2rem;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .subsection-content {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  table th, table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  table td {
+    color: #555;
+  }
+  
+  table .critic-info-container {
+    padding: 0;
+  }
+  
+  table td {
+    font-size: 1.4rem;
+    vertical-align: middle;
+  }
+  
+  table td:first-child {
+    font-weight: bold;
+    color: #008CBA;
+  }
+  
+  table td:last-child {
+    text-align: center;
+  }
+  
+  button.submit {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  button.submit:hover {
+    background-color: #0071a1;
+  }
+  
+  button.submit:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+ 
+  .movie-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .movie-img {
+      width: 90%;
+    }
+  
+    .movie-info h2 {
+      font-size: 2rem;
+    }
+  
+    .movie-info p {
+      font-size: 1.4rem;
+    }
+  
+    .critics-container {
+      padding: 20px;
+      margin-top: 30px;
+      gap: 15px;
+    }
+  
+    table th, table td {
+      font-size: 1.2rem;
+      padding: 8px 15px;
+    }
+  
+    button.submit {
+      font-size: 1rem;
+    }
   }
 
-  .movie-info p {
-    font-size: 1.4rem;
-  }
-}
+  
