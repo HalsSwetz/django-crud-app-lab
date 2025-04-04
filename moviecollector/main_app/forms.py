@@ -13,12 +13,7 @@ class CriticForm(forms.ModelForm):
         rating = self.cleaned_data.get('rating')
         source = self.cleaned_data.get('source')
 
-        if rating is not None:
-            try:
-                rating = float(rating)
-            except ValueError:
-                raise forms.ValidationError("Invalid rating value.")
-
+       
         if source == 'I' and rating is not None:
                 return round(rating, 1)
             
