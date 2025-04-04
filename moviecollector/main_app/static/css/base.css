@@ -116,13 +116,13 @@ main {
 
 #logout-form button {
   text-decoration: none;
-  color: #fff; /* Text color */
+  color: #fff; 
   font-weight: 600;
   font-size: 16px;
-  background-color: #f44336; /* Red for logout */
+  background-color: #de36f4; 
   border: none;
   border-radius: 8px;
-  padding: 10px 20px; /* Spacing inside the button */
+  padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-family: 'Lato', sans-serif;
@@ -130,16 +130,16 @@ main {
 }
 
 #logout-form button:hover {
-  background-color: #d32f2f; /* Darker red on hover */
-  transform: translateY(-3px); /* Slight lift effect */
+  background-color: #620257; 
+  transform: translateY(-3px);
 }
 
 #logout-form button:active {
-  background-color: #b71c1c; /* Even darker red when pressed */
-  transform: translateY(0); /* Return to normal position */
+  background-color: #b71c1c; 
+  transform: translateY(0); 
 }
 
 #logout-form button:focus {
-  outline: 2px solid #f7d61b; /* Gold outline on focus */
+  outline: 2px solid #f7d61b;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }

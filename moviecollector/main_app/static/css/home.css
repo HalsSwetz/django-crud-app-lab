@@ -5,7 +5,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;  /* Set full height of the viewport */
+  height: 100vh; 
   text-align: center;
   position: relative;
   z-index: 0;
@@ -30,7 +30,6 @@ main {
   color: blue;
 }
 
-/* Background image settings */
 .page-background, main {
   position: relative;
   background-image: url('https://cdn.pixabay.com/photo/2015/06/02/00/54/pink-794507_1280.jpg');
@@ -46,9 +45,8 @@ main {
   z-index: 0;
 }
 
-/* Login form container */
 .login-container {
-  background-color: rgba(255, 255, 255, 0.5); /* More translucent background */
+  background-color: rgba(255, 255, 255, 0.5); 
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   max-width: 400px;
@@ -57,13 +55,12 @@ main {
   padding-top: 5px;
   margin: 30px auto;
   z-index: 1;
-  position: absolute; /* Positioned absolutely within the main section */
-  top: 60%; /* Vertically center */
-  left: 50%; /* Horizontally center */
-  transform: translate(-50%, -50%); /* Center it correctly */
+  position: absolute; 
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
 }
 
-/* Form styling */
 .login-container .login {
   display: flex;
   flex-direction: column;
@@ -90,7 +87,7 @@ main {
 .login-container input:focus,
 .login-container button:focus {
   outline: none;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Focus effect */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   border-color: #2320f3;
 }
 
@@ -125,7 +122,6 @@ main {
   padding-bottom: 10px;
 }
 
-/* Mobile responsiveness */
 @media only screen and (max-width: 768px) {
   .login-container {
     width: 90%;
