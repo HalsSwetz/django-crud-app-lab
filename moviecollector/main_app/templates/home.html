@@ -15,7 +15,16 @@
       alt="The Movie Collector Logo"
     />
   </div>
-  
 </section>
+{% if not user.is_authenticated %}
+  <section class="login-container">
+    <form action="{% url 'home' %}" method="post" class="login">
+      <h1 class="login-header">Login</h1>
+      {% csrf_token %} {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <button type="submit" class="btn submit">Login</button>
+    </form>
+  </section>
+{% endif %}
 </main>
 {% endblock %}
