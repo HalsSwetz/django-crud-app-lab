@@ -1,6 +1,9 @@
 from django import forms
 from .models import Critic
 
+# was looking for widgets/improved ways to store different decimal type numbers for the ratings, 
+# so looked at both django docs and research on google, etc
+
 class CriticForm(forms.ModelForm):
     class Meta:
         model = Critic

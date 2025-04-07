@@ -11,8 +11,7 @@ from .forms import CriticForm
 # Create your views here.
 
 
-# def home(request):
-#     return render(request, 'home.html')
+
 class Home(LoginView):
     template_name = 'home.html'
 

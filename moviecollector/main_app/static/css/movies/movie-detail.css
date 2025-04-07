@@ -226,7 +226,7 @@
   }
   
   button.submit {
-    background-color: #008CBA;
+    background-color: #f1a60e;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -238,7 +238,7 @@
   }
   
   button.submit:hover {
-    background-color: #0071a1;
+    background-color: #f27c22;
   }
   
   button.submit:focus {
